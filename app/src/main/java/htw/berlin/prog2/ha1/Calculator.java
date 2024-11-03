@@ -75,6 +75,11 @@ public class Calculator {
         latestOperation = operation;
     }
 
+    public void pressPercentageKey() {
+        latestValue = Double.parseDouble(screen) / 100;
+        screen = Double.toString(latestValue);
+    }
+
     /**
      * Empfängt den Wert einer gedrückten unären Operationstaste, also eine der drei Operationen
      * Quadratwurzel, Prozent, Inversion, welche nur einen Operanden benötigen.

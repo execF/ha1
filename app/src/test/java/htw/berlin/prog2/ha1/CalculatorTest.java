@@ -149,8 +149,7 @@ class CalculatorTest {
 
         calc.pressDigitKey(2);
         calc.pressDigitKey(5);
-        calc.pressBinaryOperationKey("%");
-        calc.pressEqualsKey();
+        calc.pressPercentageKey();
 
         String expected = "0.25";
         String actual = calc.readScreen();
