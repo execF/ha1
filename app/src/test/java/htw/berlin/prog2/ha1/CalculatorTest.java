@@ -141,5 +141,21 @@ class CalculatorTest {
 
         assertEquals(expected, actual);
     }
+
+    @Test
+    @DisplayName("should display number as decimal after pressing %")
+    void testPercentageDecimal() {
+        Calculator calc = new Calculator();
+
+        calc.pressDigitKey(2);
+        calc.pressDigitKey(5);
+        calc.pressBinaryOperationKey("%");
+        calc.pressEqualsKey();
+
+        String expected = "0.25";
+        String actual = calc.readScreen();
+
+        assertEquals(expected, actual);
+    }
 }
 
